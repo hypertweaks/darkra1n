@@ -1,0 +1,241 @@
+@font-face {
+  font-family: 'Poppins';
+  src: url('poppins.ttf') format('truetype');
+
+}
+
+html {
+  margin: 0;
+  padding: 0;
+background-color: #f8002f;
+background-image: linear-gradient(326deg, #f8002f 0%, #000c14 74%);
+  font-family: 'Poppins', sans-serif;
+  height: 100vh;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+.container {
+  display: flex; 
+  justify-content: center; 
+  align-items: flex-start; 
+}
+
+.custom-button {
+  margin: 5px;
+  margin-top: 40px;
+  border: none;
+  border-radius: 15px;
+  opacity: 50%;
+  background-color: #121212;
+  color: #fff;
+  width: 180px;
+  height: 50px;
+  font-size: 16px;
+  cursor: pointer;
+  position: relative; 
+  overflow: hidden; 
+}
+
+.button-icon {
+  width: 24px; 
+  height: 24px; 
+  opacity: 0.5; 
+  position: absolute; 
+  left: 5px; 
+  top: 50%; 
+  transform: translateY(-50%); 
+}
+
+/* Centered Button with Opacity, Border Radius, and Background Color */
+
+
+#customLine {
+  width: 100%; /* Adjust the width as needed */
+  opacity: 25%;
+
+  height: 2px; /* Adjust the height as needed */
+  background-color: white; /* Change the background color to white */
+  /* You can add more styles to customize it further */
+}
+
+.centered-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.centered-image img {
+  width: 250px; /* Replace with your desired width */
+  height: 200px; /* Replace with your desired height */
+}
+
+/* styles.css */
+
+.custom-button-small {
+          width: 375px;
+          height: 80px;
+          background-image: url('/data/origicon/news.jpeg'); /* Replace 'your-image-url.jpg' with the URL of your image */
+          background-size: cover;
+          background-repeat: no-repeat;
+          border: none;
+          border-radius: 15px;
+          backdrop-filter: blur(100%);
+          opacity: 50%;
+          font-family: 'Arial', sans-serif;
+          color: white;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin: 10px auto; /* Center the button horizontally with some margin from the top */
+          text-decoration: none; /* Remove underline */
+          cursor: pointer; /* Add pointer cursor to indicate it's clickable */
+      }
+
+      /* Full-screen modal styles */
+      .modal {
+          display: none;
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.9);
+          z-index: 999;
+      }
+
+      .modal-content {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: #000;
+          border-radius: 0; /* Remove border-radius */
+      }
+
+      .close-button {
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          width: 100px;
+          height: 50px;
+          background-color: #b51a00;
+
+          border-radius: 15px;
+          border: 2px solid white;
+          opacity: 30%;
+          backdrop-filter: blur(100px);
+          color: white;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+      }
+
+      .modal-content iframe {
+          width: 100%;
+          height: 100%;
+      }
+
+.thanks-text {
+opacity: 50%;
+justify-content: center;
+align-items: center;
+}
+
+#spacing {
+height: 50px;
+width: 50px;
+background: transparent;
+}
+
+
+
+/* Your existing styles here */
+
+/* Styles for the bottom navbar */
+.bottom-navbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  opacity: 95%;
+  -webkit-backdrop-filter: blur(50px);
+  width: 100%;
+  height: 70px;
+  backdrop-filter: blur(50px);
+  border-top: #ffffff40 1px solid;
+  background-color: #121212;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+/* Styles for each navbar item */
+.navbar-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  color: #fff; /* Adjust text color as needed */
+opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+
+.navbar-item:hover {
+  opacity: 1;
+}
+
+/* Styles for icons */
+.icon {
+  width: 30px; /* Adjust icon size as needed */
+  height: 30px;
+}
+
+/* Styles for item text */
+.item-text {
+  font-size: 12px; /* Adjust text size as needed */
+  margin-bottom: 10px; /* Adjust spacing between icon and text */
+}
+
+/* styles.css */
+.theme-dropdown {
+
+  width: 100%; /* Customize the width */
+  height: 100%; /* Customize the height */
+  position: relative;
+  margin: 0 auto; /* Center the dropdown */
+}
+
+select {
+  width: 190px;
+  height: 40px;
+  padding: 10px;
+  font-size: 16px;
+display: flex;
+align-content: center;
+  justify-content: center;
+  margin: 10px auto;
+  margin-top: 15px;
+  margin-left: 5px;
+
+
+  background-color: #000; /* Background color */
+  color: #fff; /* Text color */
+  opacity: 0.5; /* Opacity */
+  border: none;
+  border-radius: 15px; /* Border radius */
+  cursor: pointer;
+}
+
+#content-frame {
+width: 100%;
+height: 100%;
+}
+

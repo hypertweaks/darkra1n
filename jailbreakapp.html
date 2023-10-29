@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Xylon">
+  <link rel="apple-touch-icon" href="xylon.jpeg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <style>
+        @font-face {
+            font-family: 'Poppins';
+            src: url('poppins.ttf') format('truetype');
+        }
+
+      body {
+        background-color: #000000;
+        background-image: linear-gradient(147deg, #000000 0%, #434343 74%);
+
+          font-family: 'Poppins', sans-serif;
+
+          color: #fff; /* Set text color to white */
+          margin: 0;
+          padding: 0;
+          height: 100vh;
+      }
+
+      .custom-button {
+        width: 100%;
+        height: 40px;
+        background-color: #1C1C1E;
+        border-top: 1px solid darkgrey;
+        border-bottom: 1px solid darkgrey;
+        border-left: 0.25px solid black;
+        border-right: 0.25px solid black;
+        display: flex;
+        align-items: center;
+        padding-left: 25px;
+        padding-right: 25px;
+        justify-content: space-between;
+      }
+
+      .icon {
+        width: 25px;
+        height: 25px;
+        margin-right: 20px;
+      }
+
+      .button-label {
+        font-family: 'Poppins', sans-serif;
+        color: #fff;
+        font-size: 12px;
+        display: flex;
+      }
+
+      .arrow {
+        width: 20px;
+        height: 20px;
+        right: 0;
+        
+      }
+
+      .hidden-div {
+        display: none;
+      }
+
+      .button {
+          background-color: white;
+          color: #f8002f;
+          border: none;
+          border-radius: 10px;
+          padding: 10px 20px;
+          opacity: 0.5;
+          cursor: pointer;
+      }
+
+      #changes {
+          background-color: #000000;
+          background-image: linear-gradient(147deg, #000000 0%, #434343 74%);
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          display: none;
+          z-index: 9999;
+      }
+
+      .hidden {
+          display: none;
+      }
+
+      #refreshButton {
+        position: absolute;
+          top: 0;
+          right: 0;
+        margin-right: 25px;
+        margin-top: 30px;
+          
+      }
+
+  
+    </style>
+</head>
+<body>
+    <h1 style="margin-left: 25px; margin-top: 25px; font-family: 'Poppins', sans-serif; color: #fff; font-size: 25px;">Home</h1>
+
+  <a id="refreshButton" href="#">
+      <img src="/data/jbimg/refresh.png" alt="Refresh" width="30px" height="30px" />
+  </a>
+
+  <script>
+      document.getElementById("refreshButton").addEventListener("click", function () {
+          location.reload(); // This will refresh the page when the button is clicked
+      });
+  </script>
+
+  <h3 style="margin-left: 25px; margin-top: 50px; font-family: 'Poppins', sans-serif; color: #D3D3D3; font-size: 16px; ">INFO</h3>
+
+  <button class="custom-button" id="reportButton">
+      <img class="icon" src="/data/jbimg/report.png" alt="Report Icon">
+      <span class="button-label">Report a Bug</span>
+    <img class="arrow" src="/data/jbimg/arrow.png" alt="Arrow Icon">
+  </button>
+
+  <button class="custom-button" id="open-changes">
+      <img class="icon" src="/data/jbimg/changes.png" alt="Report Icon">
+      <span class="button-label">Changes</span>
+      <img class="arrow" src="/data/jbimg/arrow.png" alt="Arrow Icon">
+  </button>
+
+  <div id="changes" class="hidden">
+      <img id="go-back" src="/data/jbimg/goback.png" alt="Go Back" width="30" height="30" style="cursor: pointer; position: absolute; top: 10px; left: 10px; margin-top: 40px; margin-left: 25px;">
+    
+     <h1 style="text-align: center; align-items: center; margin-top: 45px; font-family: 'Poppins', sans-serif; color: #fff; font-size: 25px;">Changes</h1>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <script>
+  $(document).ready(function() {
+      $("#open-changes").on("click", function() {
+          $("#changes").fadeIn();
+      });
+
+      $("#changes").on("click", function() {
+          $(this).fadeOut();
+      });
+  });
+  </script>
+
+  <script>
+  $(document).ready(function() {
+      $("#open-changes").on("click", function() {
+          $("#changes").fadeIn();
+      });
+
+      $("#go-back").on("click", function() {
+          $("#changes").fadeOut();
+      });
+  });
+  </script>
+
+  <h3 style="margin-left: 25px; margin-top: 50px; font-family: 'Poppins', sans-serif; color: #D3D3D3; font-size: 16px; ">COMMUNITY</h3>
+
+  <a href="https://roblox.com" style="text-decoration: none;">
+    <button class="custom-button">
+      <img class="icon" src="/data/jbimg/telegram.png" alt="Report Icon">
+      <span class="button-label">Telegram Group</span>
+      <img class="arrow" src="/data/jbimg/arrow.png" alt="Arrow Icon">
+    </button>
+  </a>
+
+  <a href="https://roblox.com" style="text-decoration: none;">
+    <button class="custom-button">
+      <img class="icon" src="/data/jbimg/discord.png" alt="Report Icon">
+      <span class="button-label">Discord Server</span>
+      <img class="arrow" src="/data/jbimg/arrow.png" alt="Arrow Icon">
+    </button>
+  </a>
+
+
+  
+  <button class="custom-button" id="showButton">
+    <img class="icon" src="/data/jbimg/credit.png" alt="Report Icon">
+    <span class="button-label">Credits</span>
+    <img class="arrow" src="/data/jbimg/arrow.png" alt="Arrow Icon">
+  </button>
+
+  <div class="hidden-div" id="hiddenPage">
+
+    <button class="custom-button">
+        <img class="icon" src="/data/jbimg/astral.png" alt="Report Icon">
+        <span class="button-label">Astral Team</span>
+      <img class="arrow" src="/data/jbimg/credit.png" alt="Arrow Icon">
+    </button>
+    
+    <button class="custom-button">
+        <img class="icon" src="/data/jbimg/dev.png" alt="Report Icon">
+        <span class="button-label">Dog Military Armor</span>
+      <img class="arrow" src="/data/jbimg/credit.png" alt="Arrow Icon">
+    </button>
+    
+  </div>
+
+
+
+  <script> document.getElementById("showButton").addEventListener("click", function() {
+      var hiddenDiv = document.getElementById("hiddenPage");
+      if (hiddenDiv.style.display === "none") {
+        hiddenDiv.style.display = "block";
+      } else {
+        hiddenDiv.style.display = "none";
+      }
+    });
+  </script>
+
+  <script>
+      const reportButton = document.getElementById('reportButton');
+
+      reportButton.addEventListener('click', () => {
+          const problemDescription = prompt("Report the bug you are experiencing here:");
+
+          if (problemDescription) {
+              // Replace 'YOUR_DISCORD_WEBHOOK_URL' with your actual Discord webhook URL
+              const webhookUrl = 'https://discord.com/api/webhooks/1167181026708177007/peX5cBRrlF0L4WFGraI0Nyy7XEZL7DAlLpsxlYgGIx3LIgoe0MiH5SwfBRw_KqytnO5Y';
+              const data = {
+                  content: problemDescription,
+              };
+
+              fetch(webhookUrl, {
+                  method: 'POST',
+                  headers: {
+                      'Content-Type': 'application/json',
+                  },
+                  body: JSON.stringify(data),
+              }).then(response => {
+                  if (response.ok) {
+                      alert("Problem reported successfully!");
+                  } else {
+                      alert("Failed to report the problem.");
+                  }
+              }).catch(error => {
+                  alert("An error occurred while reporting the problem.");
+              });
+          }
+      });
+  </script>
+  
+</body>
+</html>
